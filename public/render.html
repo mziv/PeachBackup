@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- These two lines provide automatic page and style reloading when files change -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/client/updater.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+
+  </head>
+  <body>
+
+
+     <div class="container">
+        <div class="top-logo">
+            <a href="https://peach.cool">
+                <img src="/images/peach-icon.png" />
+            </a>
+        </div>
+
+        <div id="feed" class="contentContainer">
+            <div id="templatePost" class="paper">
+                <div class="post"> feeling sad 2day </div> 
+
+                <div class="postStats">🤍 10 &nbsp;💬 4 &nbsp;--&nbsp; Sun Nov 29 2020 12:56:54 GMT-0800 (Pacific Standard Time)</div>
+
+                <div id="templateComment" class="comment">
+                    <img class="avatar" src="images/default.png" alt="">
+                    <div>
+                      <div class="commentHeader">
+                        <span>
+                          <strong class="name">name</strong>
+                          (<span class="userid">userid</span>)
+                        </span>
+                      </div>
+                      <div class="text">
+                        this is gonna be a pretty long comment so that I can see what overflow looks like eyooooooooooooooooooooooooo!
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+  </body>
+</html>

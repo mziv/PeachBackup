@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- These two lines provide automatic page and style reloading when files change -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/client/updater.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+
+
+     <div class="container">
+
+        <div class="contentContainer">
+            <div id="header">
+                <div class="top-logo">
+                    <a href="https://peach.cool">
+                        <img src="/images/peach-icon.png" />
+                    </a>
+                </div>
+                <div class="formTitle">
+                    <h1>Peach Backup Service</h1>
+
+                    <div class="description" style="text-align:center">Download the history of your peach posts, sorted from earliest to latest!
+                    </div>
+                </div>
+            </div>
+            
+
+            <p id="error"></p>
+
+            <form id="loginFieldsForm">
+                <input id="email" class="email" type="email" name="email" required placeholder="Email">
+                <br />
+                <input id="password" class="password" type="password" name="password" minlength="8" required placeholder="Password" />
+                <br />
+                <button id="login" class="bigSubmit" type="submit">Log In</button>
+            </form>
+            
+            <div id="downloadForm" class="hidden form-approx">
+                <button id="jsonDownload" class="bigSubmit">Download JSON Backup</button>
+                <button id="htmlDownload" class="bigSubmit">Download HTML Backup</button>
+
+
+                    <br>
+                    <div class="description" style="font-size:10pt">
+                        <b>JSON Download:</b> File download 
+                        <br><br>
+                        <b>HTML Download:</b> Loads an HTML page; to download, right click and choose "Save As"
+                    </div>
+            </div>
+        </div>
+
+        
+
+        <div id="feed" class="contentContainer hidden">
+            <div id="header">
+                <div class="top-icon">
+                    <img id="userAvatar" class="top-icon-avatar" src="images/default.png">
+                </div>
+
+                <div class="formTitle">
+                    <h1 id="username">Loading</h1>
+                    <div id="bio" class="bio"></div>
+                    <br>
+                    <div id="numPosts" class="paper2">Loading posts..</div>
+                </div>
+            </div>
+
+            <div id="templatePost" class="paper hidden">
+                <div id="postParent"> </div> 
+
+                <pre class="postStats"> 🤍 0 &nbsp;💬 0 &nbsp;--&nbsp; Sun Nov 29 2020 12:56</pre>
+
+                <div id="templateComment" class="comment hidden">
+                    <img class="avatar" src="images/default.png" alt="">
+                    <div>
+                      <div class="commentHeader">
+                        <span>
+                          <strong class="name">name</strong>
+                          <span class="userid">userid</span>
+                        </span>
+                      </div>
+                      <div class="commentText">
+                        Comment text
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+  </body>
+</html>
